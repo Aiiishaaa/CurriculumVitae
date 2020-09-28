@@ -1,23 +1,4 @@
 
-<?php
-
-$to = 'aicha.hamida06@yahoo.fr';
-$subject = $_POST['subject'];
-$message=$_POST['name'];
-$message .=$_POST['message'];
-$from = $_POST['email'];
-
-// Envoi d'email
-if(mail($to, $subject, $message)){
-    echo 'Votre message a été envoyé avec succès!';
-} else{
-    echo 'Impossible d envoyer des emails. Veuillez réessayer.';
-}
-
-?>
-
-
-
 <!doctype html>
 <html lang="fr">
 
@@ -431,6 +412,22 @@ if(mail($to, $subject, $message)){
 
                                                     </form>
                                                 </div>
+                                                <?php
+ 
+                                                $to = 'aicha.hamida06@yahoo.fr';
+                                                $subject = $_POST['subject'];
+                                                $message=$_POST['name'];
+                                                $message .=$_POST['message'];
+                                                $from = $_POST['email'];
+                                                
+                                                // Envoi d'email
+                                                if(mail($to, $subject, $message)){
+                                                    echo 'Votre message a été envoyé avec succès!';
+                                                } else{
+                                                    echo 'Impossible d envoyer des emails. Veuillez réessayer.';
+                                                }
+                                                
+                                                ?>
                                             </div>
                                         </div>
                                     </div>
